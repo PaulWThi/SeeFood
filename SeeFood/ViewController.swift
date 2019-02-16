@@ -16,6 +16,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     let imagePicker = UIImagePickerController()
     
+    @IBOutlet weak var whatIsItLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,7 +64,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Model failed to process image.")
             }
-            print(results)
+            
+            if let firstResult = results.first {
+                print(firstResult.identifier)
+                self.whatIsItLabel.text = firstResult.identifier
+                if firstResult.identifier.contains("hotdog") {
+                    self.navigationItem.title = "Hotdog!"
+                } else {
+                    self.navigationItem.title = "Not a hotdog!"
+                }
+            }
+            
+            
         }
         let handler = VNImageRequestHandler(ciImage: image)
         

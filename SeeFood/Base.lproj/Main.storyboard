@@ -21,12 +21,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iQa-2m-W9o">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is it?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58I-z4-rTI">
+                                <rect key="frame" x="0.0" y="574" width="375" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iQa-2m-W9o" firstAttribute="bottom" secondItem="3hT-bj-rkm" secondAttribute="bottom" id="4VF-It-CrN"/>
                             <constraint firstItem="iQa-2m-W9o" firstAttribute="leading" secondItem="3hT-bj-rkm" secondAttribute="leading" id="Xd2-zY-cFb"/>
                             <constraint firstItem="iQa-2m-W9o" firstAttribute="trailing" secondItem="3hT-bj-rkm" secondAttribute="trailing" id="ZMP-gk-2pT"/>
+                            <constraint firstItem="3hT-bj-rkm" firstAttribute="bottom" secondItem="58I-z4-rTI" secondAttribute="bottom" constant="57" id="gHw-ut-BiW"/>
+                            <constraint firstItem="58I-z4-rTI" firstAttribute="trailing" secondItem="3hT-bj-rkm" secondAttribute="trailing" id="kHu-Sc-xgU"/>
+                            <constraint firstItem="58I-z4-rTI" firstAttribute="leading" secondItem="3hT-bj-rkm" secondAttribute="leading" id="mR2-dh-jRP"/>
                             <constraint firstItem="iQa-2m-W9o" firstAttribute="top" secondItem="3hT-bj-rkm" secondAttribute="top" id="obI-Rq-QLF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3hT-bj-rkm"/>
@@ -40,6 +49,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="iQa-2m-W9o" id="WmO-f0-FOk"/>
+                        <outlet property="whatIsItLabel" destination="58I-z4-rTI" id="7HG-2q-qZ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
